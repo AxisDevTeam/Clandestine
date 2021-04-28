@@ -1,0 +1,6 @@
+#ifndef SOBELOUTLINES_INCLUDED
+#define SOBELOUTLINES_INCLUDED
+
+
+
+#endif

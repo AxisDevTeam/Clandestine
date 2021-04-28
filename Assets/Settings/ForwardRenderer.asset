@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RendererFeatures:
   - {fileID: 8698326237225714978}
-  m_RendererFeatureMap: 22854c86a0a9b678
+  - {fileID: 6039856239207484552}
+  m_RendererFeatureMap: 22854c86a0a9b678888c63c03fe1d153
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -43,6 +44,23 @@ MonoBehaviour:
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
   m_AccurateGbufferNormals: 0
+--- !u!114 &6039856239207484552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 263837abc44089045a7b40aaaee7c6fc, type: 3}
+  m_Name: Outlines
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    material: {fileID: 2100000, guid: b987e2b273acbe0429e49da3eb0a5019, type: 2}
+    materialPassIndex: 0
+    renderEvent: 500
 --- !u!114 &8698326237225714978
 MonoBehaviour:
   m_ObjectHideFlags: 0
