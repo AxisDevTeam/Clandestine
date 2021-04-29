@@ -10,15 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9451660f9acaa2c4a82a6ba44563e0ac, type: 3}
-  m_Name: NewBlit
+  m_Name: SOBEL
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    Event: 300
-    blitMaterial: {fileID: 2100000, guid: 27a24fa5edff6a54fa25e9be17053626, type: 2}
-    blitMaterialPassIndex: -1
-    destination: 1
+    Event: 550
+    blitMaterial: {fileID: 2100000, guid: 5b64c841d100f024aac5d05ed192515d, type: 2}
+    blitMaterialPassIndex: 0
+    destination: 0
     textureId: _BlitPassTexture
+--- !u!114 &-5931770670284013535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c67f6268f93723438ad241803cf70cb, type: 3}
+  m_Name: NewOutlineFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    outlineMaterial: {fileID: 2100000, guid: 114d8678773052f4b96f2d223970211a, type: 2}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33,10 +48,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RendererFeatures:
   - {fileID: 8698326237225714978}
-  - {fileID: 6425703950257675013}
-  - {fileID: 9171985164930855940}
   - {fileID: -8548922354601983436}
-  m_RendererFeatureMap: 22854c86a0a9b67805dbeeaab2af2c590434db88e96f497f34828da169205c89
+  - {fileID: 7946173811317977905}
+  - {fileID: -5931770670284013535}
+  m_RendererFeatureMap: 22854c86a0a9b67834828da169205c8931b31e13fb7a466e2100a4d4001eaead
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -78,10 +93,7 @@ MonoBehaviour:
   m_Name: Outlines
   m_EditorClassIdentifier: 
   m_Active: 1
-  settings:
-    material: {fileID: 2100000, guid: be19c252218266743bb2eef6e0410224, type: 2}
-    materialPassIndex: 0
-    renderEvent: 500
+  settings: {material: {fileID: 2100000, guid: be19c252218266743bb2eef6e0410224, type: 2}, materialPassIndex: 0, renderEvent: 500}
 --- !u!114 &6425703950257675013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +107,19 @@ MonoBehaviour:
   m_Name: DepthNormalsFeature
   m_EditorClassIdentifier: 
   m_Active: 0
+--- !u!114 &7946173811317977905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c112c19a3a69c4697b058198829075, type: 3}
+  m_Name: NewDepthNormalsFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
 --- !u!114 &8698326237225714978
 MonoBehaviour:
   m_ObjectHideFlags: 0
