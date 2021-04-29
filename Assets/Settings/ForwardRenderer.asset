@@ -17,8 +17,37 @@ MonoBehaviour:
     Event: 550
     blitMaterial: {fileID: 2100000, guid: 5b64c841d100f024aac5d05ed192515d, type: 2}
     blitMaterialPassIndex: 0
-    destination: 0
-    textureId: _BlitPassTexture
+    setInverseViewMatrix: 0
+    srcType: 0
+    srcTextureId: _CameraColorTexture
+    srcTextureObject: {fileID: 0}
+    dstType: 0
+    dstTextureId: _BlitPassTexture
+    dstTextureObject: {fileID: 0}
+--- !u!114 &-6738916067131156857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9451660f9acaa2c4a82a6ba44563e0ac, type: 3}
+  m_Name: NewBlit
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 450
+    blitMaterial: {fileID: 2100000, guid: 1ca2f4bc4c08f9b42bf1e4d03339841d, type: 2}
+    blitMaterialPassIndex: 0
+    setInverseViewMatrix: 0
+    srcType: 0
+    srcTextureId: _CameraColorTexture
+    srcTextureObject: {fileID: 0}
+    dstType: 0
+    dstTextureId: _BlitPassTexture
+    dstTextureObject: {fileID: 0}
 --- !u!114 &-5931770670284013535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34,6 +63,30 @@ MonoBehaviour:
   m_Active: 1
   settings:
     outlineMaterial: {fileID: 2100000, guid: 114d8678773052f4b96f2d223970211a, type: 2}
+--- !u!114 &-3033589405076907223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9451660f9acaa2c4a82a6ba44563e0ac, type: 3}
+  m_Name: NewBlit
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 500
+    blitMaterial: {fileID: 2100000, guid: 7b3dada7ab9308347abd0ce964a8a6df, type: 2}
+    blitMaterialPassIndex: 0
+    setInverseViewMatrix: 0
+    srcType: 0
+    srcTextureId: _CameraColorTexture
+    srcTextureObject: {fileID: 0}
+    dstType: 0
+    dstTextureId: _BlitPassTexture
+    dstTextureObject: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,10 +101,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RendererFeatures:
   - {fileID: 8698326237225714978}
-  - {fileID: -8548922354601983436}
   - {fileID: 7946173811317977905}
   - {fileID: -5931770670284013535}
-  m_RendererFeatureMap: 22854c86a0a9b67834828da169205c8931b31e13fb7a466e2100a4d4001eaead
+  - {fileID: -3033589405076907223}
+  m_RendererFeatureMap: 22854c86a0a9b67831b31e13fb7a466e2100a4d4001eaead299b003c8286e6d5
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:

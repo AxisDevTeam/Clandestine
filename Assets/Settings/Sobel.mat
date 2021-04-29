@@ -96,7 +96,7 @@ Material:
     - _ClearCoatSmoothness: 0
     - _Cull: 2
     - _Cutoff: 0.5
-    - _Delta: 0.0011
+    - _Delta: 0.0005
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
@@ -108,7 +108,7 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _Poseterize: 0
-    - _PosterizationCount: 8
+    - _PosterizationCount: 725.1
     - _QueueOffset: 0
     - _Raw: 0
     - _ReceiveShadows: 1

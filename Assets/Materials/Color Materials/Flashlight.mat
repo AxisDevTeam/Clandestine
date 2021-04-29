@@ -7,9 +7,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Black Scene
-  m_Shader: {fileID: -6465566751694194690, guid: 53d7eff21c502e84f8f7d087c50b512d, type: 3}
-  m_ShaderKeywords: _SPECULAR_SETUP
+  m_Name: Flashlight
+  m_Shader: {fileID: -6465566751694194690, guid: 7db6b23ce7badaa4681a2de1e0d416d1, type: 3}
+  m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -19,8 +19,12 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_8d7c1e5129884b5383756b921060095b:
-        m_Texture: {fileID: 2800000, guid: d08e36a2305ae9c428f89a9bdebf5363, type: 3}
+    - Texture2D_67530B9A:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - Texture2D_A83E5C2D:
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
@@ -55,6 +59,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -63,11 +71,11 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _ScreenSpaceOcclusionTexture:
+    - _SpecGlossMap:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    - _SpecGlossMap:
+    - _Texture:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -84,12 +92,17 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - Vector1_2cdbe32fee3444f2a0b9136c59551793: 0.2
-    - Vector1_8045509da9514897b8fd2246879748af: 0.75
-    - Vector1_9323ddda5c1e4c40a75f6abf98aae8ac: 0.5
-    - Vector1_ae4f8fffe3ca40bba7bad93606657512: 0.1
+    - Boolean_A3E8CDCF: 0
+    - Boolean_B2873045: 0
+    - Vector1_27BEDB90: 0.0665
+    - Vector1_360DB9D7: 0
+    - Vector1_4CF5A17C: 0.35
+    - Vector1_714D1E8D: 6
+    - Vector1_B2B06139: 0.55
+    - Vector1_C1E785C6: 0.85
+    - Vector1_D8E2999F: 0.3
+    - Vector1_F5C58481: 1
     - _AlphaClip: 0
-    - _BaseColor: 0.03
     - _Blend: 0
     - _BumpScale: 1
     - _ClearCoatMask: 0
@@ -99,7 +112,9 @@ Material:
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
     - _DstBlend: 0
+    - _EdgeSmoothness: 0
     - _EnvironmentReflections: 1
+    - _FirstEdge: 0.35
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -108,21 +123,38 @@ Material:
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _Smoothness: 0
+    - _RecieveShadows: 0
+    - _ReflLOD: 0.71
+    - _RelfStrength: 0.1
+    - _RimSize: 0.3
+    - _RimStrength: 6
+    - _SecondEdge: 0.55
+    - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
+    - _SpecularSize: 0.85
     - _SrcBlend: 1
     - _Surface: 0
-    - _WorkflowMode: 0
+    - _UNM: 0
+    - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
-    - Color_e23b73d85aaf48c9ae6d606261431668: {r: 0, g: 0, b: 0, a: 0}
-    - _BaseColor: {r: 0.8757863, g: 0, b: 1, a: 1}
+    - Color_B59C75E2: {r: 1, g: 1, b: 1, a: 0}
+    - Color_BC2E5DD7: {r: 0.6415094, g: 0, b: 0, a: 0}
+    - Color_E05EC78B: {r: 1, g: 0.0990566, b: 0.0990566, a: 0}
+    - Color_EC160787: {r: 0.6226415, g: 0.07929868, b: 0.07929868, a: 0}
+    - Color_F8F08D9D: {r: 0.3301887, g: 0.06385724, b: 0.06385724, a: 0}
+    - _BaseColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FirstTint: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 0}
+    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
+    - _SecondTint: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
---- !u!114 &6607540639524960892
+--- !u!114 &2128660892525360869
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
