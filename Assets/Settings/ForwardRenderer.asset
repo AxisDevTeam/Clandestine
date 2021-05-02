@@ -77,15 +77,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings:
-    Event: 500
+    Event: 550
     blitMaterial: {fileID: 2100000, guid: 7b3dada7ab9308347abd0ce964a8a6df, type: 2}
-    blitMaterialPassIndex: 0
+    blitMaterialPassIndex: -1
     setInverseViewMatrix: 0
     srcType: 0
-    srcTextureId: _CameraColorTexture
+    srcTextureId: 
     srcTextureObject: {fileID: 0}
     dstType: 0
-    dstTextureId: _BlitPassTexture
+    dstTextureId: 
     dstTextureObject: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
@@ -193,7 +193,7 @@ MonoBehaviour:
     NormalSamples: 1
     Intensity: 1.07
     DirectLightingStrength: 0.683
-    Radius: 0.25
+    Radius: 0.3
     SampleCount: 6
 --- !u!114 &9171985164930855940
 MonoBehaviour:

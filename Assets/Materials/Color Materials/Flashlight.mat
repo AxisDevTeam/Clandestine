@@ -118,18 +118,18 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Metallic: 0
+    - _Metallic: 0.11
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueOffset: 0
     - _ReceiveShadows: 1
-    - _RecieveShadows: 0
-    - _ReflLOD: 0.71
+    - _RecieveShadows: 1
+    - _ReflLOD: -1.96
     - _RelfStrength: 0.1
     - _RimSize: 0.3
-    - _RimStrength: 6
+    - _RimStrength: 3.3
     - _SecondEdge: 0.55
-    - _Smoothness: 0.5
+    - _Smoothness: 0.494
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SpecularSize: 0.85
@@ -144,13 +144,13 @@ Material:
     - Color_E05EC78B: {r: 1, g: 0.0990566, b: 0.0990566, a: 0}
     - Color_EC160787: {r: 0.6226415, g: 0.07929868, b: 0.07929868, a: 0}
     - Color_F8F08D9D: {r: 0.3301887, g: 0.06385724, b: 0.06385724, a: 0}
-    - _BaseColor: {r: 0.5849056, g: 0.5849056, b: 0.5849056, a: 1}
+    - _BaseColor: {r: 1, g: 0.87771446, b: 0, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _Emission: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FirstTint: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 0}
-    - _RimColor: {r: 1, g: 1, b: 1, a: 1}
-    - _SecondTint: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 1}
+    - _FirstTint: {r: 0.6886792, g: 0.53520805, b: 0.20465466, a: 0}
+    - _RimColor: {r: 0.6509434, g: 0.63152546, b: 0.5311944, a: 1}
+    - _SecondTint: {r: 0.8773585, g: 0.6805333, b: 0.07863116, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
