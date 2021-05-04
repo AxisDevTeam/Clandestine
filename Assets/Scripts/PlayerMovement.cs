@@ -5,40 +5,52 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
 
-    public CharacterController controller;
+    CharacterController controller;
 
-    public float speed = 12f;
-   
+    [Header("Base & Current Speed")]
+    public float baseSpeed = 12f;
+    public float currentSpeed = 12f;
 
+    [Header("Gravity")]
     public float gravity = -9.81f;
 
+    [Header("Ground & Jump")]
     public Transform groundCheck;
     public float groundDistance = 0.4f;
+    //no need to mark ground objects with ground layer, should work with all layers except for IgnoreRaycast
     public LayerMask groundMask;
     public float jumpHeight = 3f;
 
+    [Header("Sprint Settings")]
     public bool isSprinting = false;
     public float sprintingSpeed;
 
+    [Header("Crouch Settings")]
     public bool isCrouching = false;
     public float crouchingHeight = 2f;
     public float originalHeight = 3.8f;
+    public float crouchingSpeed = 3f;
 
 
 
     Vector3 velocity;
     public bool isGrounded;
 
+    private void Start()
+    {
+        controller = GetComponent<CharacterController>();
+    }
     // Update is called once per frame
     void Update()
     {
-       
-               
+
+
 
         //this part is the groundcheck to stop velocity from becoming comedy
+
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
-        if(isGrounded && velocity.y < 0)
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -48,8 +60,9 @@ public class PlayerMovement : MonoBehaviour
         float z = Input.GetAxis("Vertical");
 
         Vector3 move = transform.right * x + transform.forward * z;
+        move = Vector3.ClampMagnitude(move,1f);
 
-        controller.Move(move * speed * Time.deltaTime);
+        controller.Move(move * currentSpeed * Time.deltaTime);
 
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -75,11 +88,11 @@ public class PlayerMovement : MonoBehaviour
             
         if (isSprinting == true)
         {
-            speed = sprintingSpeed;
+            currentSpeed = sprintingSpeed;
         }
         if (isSprinting == false)
         {
-            speed = 12f;
+            currentSpeed = baseSpeed;
         }
   
     
@@ -97,7 +110,7 @@ public class PlayerMovement : MonoBehaviour
         {
             isSprinting = false;
             controller.height = crouchingHeight;
-            speed = 3f;
+            currentSpeed = crouchingSpeed;
             
         }
         else
