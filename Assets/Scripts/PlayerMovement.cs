@@ -21,9 +21,8 @@ public class PlayerMovement : MonoBehaviour
     public float sprintingSpeed;
 
     public bool isCrouching = false;
-    public float crouchingDistance;
-    public Transform Player; 
-    public float originalHeight;
+    public float crouchingHeight = 2f;
+    public float originalHeight = 3.8f;
 
 
 
@@ -90,13 +89,21 @@ public class PlayerMovement : MonoBehaviour
         {
             isCrouching = true;
         }
-        
+        else
+        {
+            isCrouching = false;
+        }
         if (isCrouching == true)
         {
             isSprinting = false;
+            controller.height = crouchingHeight;
+            speed = 3f;
             
         }
-    
+        else
+        {
+            controller.height = originalHeight;
+        }
     
     }   
 
