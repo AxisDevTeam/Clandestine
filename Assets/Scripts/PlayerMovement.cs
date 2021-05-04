@@ -8,6 +8,7 @@ public class PlayerMovement : MonoBehaviour
     public CharacterController controller;
 
     public float speed = 12f;
+   
 
     public float gravity = -9.81f;
 
@@ -16,12 +17,25 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public float jumpHeight = 3f;
 
+    public bool isSprinting = false;
+    public float sprintingSpeed;
+
+    public bool isCrouching = false;
+    public float crouchingDistance;
+    public Transform Player; 
+    public float originalHeight;
+
+
+
     Vector3 velocity;
     public bool isGrounded;
 
     // Update is called once per frame
     void Update()
     {
+       
+               
+
         //this part is the groundcheck to stop velocity from becoming comedy
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
@@ -47,5 +61,43 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
-    }
+
+        //This is about sprinting
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            isSprinting = true;
+        }
+        else
+        {
+            isSprinting = false;
+        }   
+    
+            
+        if (isSprinting == true)
+        {
+            speed = sprintingSpeed;
+        }
+        if (isSprinting == false)
+        {
+            speed = 12f;
+        }
+  
+    
+        //This is about crouching
+    
+        if (Input.GetKey(KeyCode.LeftControl))
+        {
+            isCrouching = true;
+        }
+        
+        if (isCrouching == true)
+        {
+            isSprinting = false;
+        }
+    
+    
+    }   
+
+
 }
