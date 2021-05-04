@@ -94,6 +94,7 @@ public class PlayerMovement : MonoBehaviour
         if (isCrouching == true)
         {
             isSprinting = false;
+            
         }
     
     
