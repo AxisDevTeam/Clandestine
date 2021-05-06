@@ -24,6 +24,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sprint Settings")]
     public bool isSprinting = false;
     public float sprintingSpeed;
+    public float amountDecrease;
+    public float amountIncrease;
+    public bool recharging;
+    public float Stamina = 100f;
 
     [Header("Crouch Settings")]
     public bool isCrouching = false;
@@ -31,6 +35,8 @@ public class PlayerMovement : MonoBehaviour
     public float originalHeight = 3.8f;
     public float crouchingSpeed = 3f;
 
+
+    
 
 
     Vector3 velocity;
@@ -75,10 +81,14 @@ public class PlayerMovement : MonoBehaviour
         controller.Move(velocity * Time.deltaTime);
 
         //This is about sprinting
+        //Remember to fix the game thinking you're sprinting when you stand still & holding shift
 
+        if (recharging == true) isSprinting = false;
+       
+        
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            isSprinting = true;
+           if(recharging == false) isSprinting = true;
         }
         else
         {
@@ -117,7 +127,28 @@ public class PlayerMovement : MonoBehaviour
         {
             controller.height = originalHeight;
         }
-    
+
+
+        //this is about sprinting stamina
+        if (isSprinting == true)
+        {
+            Stamina -= amountDecrease * Time.deltaTime;
+        }
+        else
+        {
+            Stamina += amountIncrease * Time.deltaTime;
+        }
+        if (Stamina <= 0f)
+        {
+            recharging = true;
+            isSprinting = false;
+        }
+        if (Stamina >= 100f)
+        {
+            recharging = false;
+        }
+
+        Stamina = Mathf.Clamp(Stamina, 0f, 100f);
     }   
 
 

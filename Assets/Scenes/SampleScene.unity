@@ -153,7 +153,7 @@ MeshCollider:
   m_GameObject: {fileID: 24314757}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -1197,7 +1197,7 @@ MeshCollider:
   m_GameObject: {fileID: 272053821}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
@@ -1859,7 +1859,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-43812
+  m_Name: pb_Mesh18770
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2401,21 +2401,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9b92c24d1943f46b90c00ec82b1ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 1041145422}
-  speed: 12
-  gravity: -9.81
+  baseSpeed: 8
+  currentSpeed: 8
+  gravity: -39.2
   groundCheck: {fileID: 557739726}
-  groundDistance: 0.4
+  groundDistance: 0.25
   groundMask:
     serializedVersion: 2
-    m_Bits: 64
-  jumpHeight: 3
+    m_Bits: 243
+  jumpHeight: 1.75
   isSprinting: 0
-  sprintingSpeed: 24
+  sprintingSpeed: 12
+  amountDecrease: 20
+  amountIncrease: 10
+  recharging: 0
+  Stamina: 100
   isCrouching: 0
-  crouchingDistance: 0
-  Player: {fileID: 0}
-  originalHeight: 0
+  crouchingHeight: 2
+  originalHeight: 3.8
+  crouchingSpeed: 3
   isGrounded: 0
 --- !u!114 &1041145425
 MonoBehaviour:
@@ -2429,6 +2433,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d2fcfc10959f284c978d63711bebddb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Battery: 100
+  LightIsOn: 1
+  amountDecrease: 10
+  amountIncrease: 5
+  recharging: 0
   spot: {fileID: 1676192979}
   flashlight: {fileID: 6843445443701609909}
 --- !u!1 &1270878838
@@ -2724,7 +2733,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh19748
+  m_Name: pb_Mesh18746
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
