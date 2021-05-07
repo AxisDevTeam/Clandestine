@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{a687dda1-b05c-44f3-9b83-40d71c9fdf0a}">
+		<property name="assetPath">
+			<value>nightOutdoorAmbiance.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>26.583416666666668</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{920b5d7c-f5cf-4320-a28c-23e85022d416}</destination>
+		</relationship>
+	</object>
+</objects>
