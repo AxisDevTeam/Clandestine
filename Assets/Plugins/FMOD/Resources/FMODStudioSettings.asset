@@ -393,8 +393,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: Assets/clandestine1/clandestine1.fspro
-  sourceBankPath: Assets\clandestine1\Build
+  sourceProjectPath: FMOD/clandestine_scene1/clandestine_scene1.fspro
+  sourceBankPath: FMOD\clandestine_scene1\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
