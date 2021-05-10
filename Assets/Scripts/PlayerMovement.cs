@@ -24,8 +24,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Sprint Settings")]
     public bool isSprinting = false;
     public float sprintingSpeed;
-    public float amountDecrease;
-    public float amountIncrease;
+    public float amountDecrease = 20f;
+    public float amountIncrease = 10f;
     public bool recharging;
     public float Stamina = 100f;
 
@@ -128,7 +128,10 @@ public class PlayerMovement : MonoBehaviour
             controller.height = originalHeight;
         }
 
-
+        if (isCrouching == true)
+        {
+            isGrounded = true;
+        }
         //this is about sprinting stamina
         if (isSprinting == true)
         {
