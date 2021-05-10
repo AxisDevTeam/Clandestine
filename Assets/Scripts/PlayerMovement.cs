@@ -119,19 +119,16 @@ public class PlayerMovement : MonoBehaviour
         if (isCrouching == true)
         {
             isSprinting = false;
-            controller.height = crouchingHeight;
+            transform.localScale =new Vector3 (transform.localScale.x, crouchingHeight, transform.localScale.z);
             currentSpeed = crouchingSpeed;
             
         }
         else
         {
-            controller.height = originalHeight;
+            transform.localScale =new Vector3(transform.localScale.x, originalHeight, transform.localScale.z);
         }
 
-        if (isCrouching == true)
-        {
-            isGrounded = true;
-        }
+   
         //this is about sprinting stamina
         if (isSprinting == true)
         {
