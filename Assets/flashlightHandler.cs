@@ -8,8 +8,8 @@ public class flashlightHandler : MonoBehaviour
     public float Battery = 100f;
     public bool LightIsOn = false;
 
-    public float amountDecrease;
-    public float amountIncrease;
+    public float amountDecrease = 10f;
+    public float amountIncrease = 5f;
     public bool recharging;
     
     public GameObject spot;
