@@ -42,6 +42,9 @@ public class PlayerMovement : MonoBehaviour
     Vector3 velocity;
     public bool isGrounded;
 
+    //after you jump, whatever velocity you had when you pressed space is carried through while you jump.
+    Vector3 jumpContinue;
+
     private void Start()
     {
         controller = GetComponent<CharacterController>();
@@ -68,11 +71,20 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
         move = Vector3.ClampMagnitude(move,1f);
 
-        controller.Move(move * currentSpeed * Time.deltaTime);
+        if (isGrounded == true)
+        {
+            controller.Move(move * currentSpeed * Time.deltaTime);
+        }
+        else
+        {
+            controller.Move((jumpContinue+move)/2 * currentSpeed * Time.deltaTime);
+        }
+        
 
         if(Input.GetButtonDown("Jump") && isGrounded)
         {
             velocity.y = Mathf.Sqrt(jumpHeight * -2f * gravity);
+            jumpContinue = move;
         }
 
         // this is the part about gravity
