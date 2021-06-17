@@ -102,6 +102,21 @@ MonoBehaviour:
       restoreCamera: 1
       offset: {x: 0, y: 0, z: 0, w: 0}
       cameraFieldOfView: 60
+--- !u!114 &-4387507100147664551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c67f6268f93723438ad241803cf70cb, type: 3}
+  m_Name: OutlineFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    outlineMaterial: {fileID: 2100000, guid: 114d8678773052f4b96f2d223970211a, type: 2}
 --- !u!114 &-3033589405076907223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,6 +141,19 @@ MonoBehaviour:
     dstType: 0
     dstTextureId: 
     dstTextureObject: {fileID: 0}
+--- !u!114 &-2677514475233874019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c112c19a3a69c4697b058198829075, type: 3}
+  m_Name: DepthNormalsFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,11 +168,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_RendererFeatures:
   - {fileID: 8698326237225714978}
-  - {fileID: 7946173811317977905}
-  - {fileID: -5931770670284013535}
   - {fileID: -3033589405076907223}
   - {fileID: 7293260012779493412}
-  m_RendererFeatureMap: 22854c86a0a9b67831b31e13fb7a466e2100a4d4001eaead299b003c8286e6d52458481c57dd3665
+  - {fileID: 8307346831745853243}
+  - {fileID: 6408580490190645295}
+  m_RendererFeatureMap: 22854c86a0a9b678299b003c8286e6d52458481c57dd36653ba72de4ed9f49732fe84f7000daef58
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -173,6 +201,97 @@ MonoBehaviour:
   m_ShadowTransparentReceive: 1
   m_RenderingMode: 0
   m_AccurateGbufferNormals: 0
+--- !u!114 &403450518561857802
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: NewRenderObjects
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: NewRenderObjects
+    Event: 1000
+    filterSettings:
+      RenderQueueType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 4294967295
+      PassNames: []
+    overrideMaterial: {fileID: 0}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 0
+    depthCompareFunction: 4
+    enableWrite: 1
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 0
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 1
+      restoreCamera: 1
+      offset: {x: 0, y: 0, z: 0, w: 0}
+      cameraFieldOfView: 25.4
+--- !u!114 &1813871266152178354
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b3d386ba5cd94485973aee1479b272e, type: 3}
+  m_Name: NewRenderObjects
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    passTag: NewRenderObjects
+    Event: 1000
+    filterSettings:
+      RenderQueueType: 0
+      LayerMask:
+        serializedVersion: 2
+        m_Bits: 128
+      PassNames: []
+    overrideMaterial: {fileID: 0}
+    overrideMaterialPassIndex: 0
+    overrideDepthState: 1
+    depthCompareFunction: 8
+    enableWrite: 0
+    stencilSettings:
+      overrideStencilState: 0
+      stencilReference: 12
+      stencilCompareFunction: 8
+      passOperation: 0
+      failOperation: 0
+      zFailOperation: 0
+    cameraSettings:
+      overrideCamera: 0
+      restoreCamera: 1
+      offset: {x: -2.59, y: 0, z: 0, w: 1}
+      cameraFieldOfView: 150.8
+--- !u!114 &1876127770070971755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c112c19a3a69c4697b058198829075, type: 3}
+  m_Name: NewDepthNormalsFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
 --- !u!114 &6039856239207484552
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,6 +306,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Active: 1
   settings: {material: {fileID: 2100000, guid: be19c252218266743bb2eef6e0410224, type: 2}, materialPassIndex: 0, renderEvent: 500}
+--- !u!114 &6408580490190645295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c67f6268f93723438ad241803cf70cb, type: 3}
+  m_Name: NewOutlineFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    outlineMaterial: {fileID: 2100000, guid: 114d8678773052f4b96f2d223970211a, type: 2}
 --- !u!114 &6425703950257675013
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,6 +371,19 @@ MonoBehaviour:
   m_Name: NewDepthNormalsFeature
   m_EditorClassIdentifier: 
   m_Active: 1
+--- !u!114 &8307346831745853243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2c112c19a3a69c4697b058198829075, type: 3}
+  m_Name: NewDepthNormalsFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
 --- !u!114 &8698326237225714978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -247,16 +394,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f62c9c65cf3354c93be831c8bc075510, type: 3}
-  m_Name: SSAO
+  m_Name: ssao
   m_EditorClassIdentifier: 
   m_Active: 1
   m_Shader: {fileID: 4800000, guid: 0849e84e3d62649e8882e9d6f056a017, type: 3}
   m_Settings:
     Downsample: 0
     Source: 0
-    NormalSamples: 1
+    NormalSamples: 2
     Intensity: 1
-    DirectLightingStrength: 0.683
+    DirectLightingStrength: 0.739
     Radius: 0.55
     SampleCount: 6
 --- !u!114 &9171985164930855940
