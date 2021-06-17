@@ -35,8 +35,9 @@ public class PlayerMovement : MonoBehaviour
     public float originalHeight = 3.8f;
     public float crouchingSpeed = 3f;
 
-
-    
+    [Header("Anim Settings")]
+    public Animator anim;
+    public float runningSpeedMul = 1.2f;
 
 
     Vector3 velocity;
@@ -52,7 +53,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
 
 
         //this part is the groundcheck to stop velocity from becoming comedy
@@ -67,6 +68,12 @@ public class PlayerMovement : MonoBehaviour
         //this is the part about WASD & jumping
         float x = Input.GetAxis("Horizontal");
         float z = Input.GetAxis("Vertical");
+
+
+        anim.SetBool("Walking", ( (Mathf.Abs(x)>0 || Mathf.Abs(z) > 0) && isGrounded) );
+        anim.SetBool("Sprinting", isSprinting);
+        if (!isSprinting) anim.SetFloat("speedMul", 1f);
+        else anim.SetFloat("speedMul", runningSpeedMul);
 
         Vector3 move = transform.right * x + transform.forward * z;
         move = Vector3.ClampMagnitude(move,1f);
