@@ -15,6 +15,9 @@ ModelImporter:
   - first:
       74: 6560591198430667156
     second: Armature|Shoot.001
+  - first:
+      74: -623603649343465320
+    second: Scene
   externalObjects: {}
   materials:
     materialImportMode: 2
