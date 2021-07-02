@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: FMOD/clandestine_scene1/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637594509229012459
+  lastModified: 637595709544249739
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -36,7 +36,7 @@ MonoBehaviour:
   Path: FMOD/clandestine_scene1/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637594509228982549
+  lastModified: 637595709544229796
   LoadResult: 0
   FileSizes: []
   Exists: 1
@@ -62,7 +62,7 @@ MonoBehaviour:
   - {fileID: -2314969461745676812}
   StringsBanks:
   - {fileID: -6882070342709585944}
-  stringsBankWriteTime: 637594509229012459
+  stringsBankWriteTime: 637595709544249739
   cacheVersion: 6
 --- !u!114 &7539588344844007584
 MonoBehaviour:

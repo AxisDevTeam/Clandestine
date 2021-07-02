@@ -117,6 +117,33 @@ MonoBehaviour:
   m_Active: 1
   settings:
     outlineMaterial: {fileID: 2100000, guid: 114d8678773052f4b96f2d223970211a, type: 2}
+--- !u!114 &-3952971234861759955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78ba8cf8226e6cc4ca89f96ec79aaea5, type: 3}
+  m_Name: NewAtmosphericFogRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    color: {r: 0, g: 0, b: 0, a: 1}
+    sunColor: {r: 0, g: 0, b: 0, a: 1}
+    fogDensity: 0.125
+    fogDensityPower: 6
+    skyAlpha: 0.685
+    useHeightFog: 1
+    fogHeightStart: 0
+    fogHeightEnd: 1202.3
+    fogHeightPower: 0.9
+    extraFogHeightEnd: 0
+    extraFogHeightPower: 0.5
+    directionalIntesity: 0
+    directionalPower: 1
 --- !u!114 &-3033589405076907223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9451660f9acaa2c4a82a6ba44563e0ac, type: 3}
   m_Name: NewBlit
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     Event: 550
     blitMaterial: {fileID: 2100000, guid: 7b3dada7ab9308347abd0ce964a8a6df, type: 2}
@@ -172,7 +199,8 @@ MonoBehaviour:
   - {fileID: 7293260012779493412}
   - {fileID: 8307346831745853243}
   - {fileID: 6408580490190645295}
-  m_RendererFeatureMap: 22854c86a0a9b678299b003c8286e6d52458481c57dd36653ba72de4ed9f49732fe84f7000daef58
+  - {fileID: -3952971234861759955}
+  m_RendererFeatureMap: 22854c86a0a9b678299b003c8286e6d52458481c57dd36653ba72de4ed9f49732fe84f7000daef582d42ba0a9b3924c9
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -352,11 +380,11 @@ MonoBehaviour:
     blitMaterial: {fileID: 2100000, guid: 6f3999dfd109f044c8f6a7029be1890b, type: 2}
     blitMaterialPassIndex: 0
     setInverseViewMatrix: 0
-    srcType: 1
-    srcTextureId: _AfterPostProcessTexture
+    srcType: 0
+    srcTextureId: 
     srcTextureObject: {fileID: 0}
-    dstType: 1
-    dstTextureId: _AfterPostProcessTexture
+    dstType: 0
+    dstTextureId: 
     dstTextureObject: {fileID: 0}
 --- !u!114 &7946173811317977905
 MonoBehaviour:
