@@ -10,6 +10,8 @@ public class gunAudio : MonoBehaviour
 
     private FMOD.Studio.EventInstance instance;
 
+    public Transform player;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,16 +20,15 @@ public class gunAudio : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Gunshot");
-        instance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject));
+        
     }
 
     public void RandomSound()
     {
         //randomSound.clip = audioSources[Random.Range(0, audioSources.Length)];
         //randomSound.Play();
-        
-        
+        instance = FMODUnity.RuntimeManager.CreateInstance("event:/Gunshot");
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(instance, player, GetComponent<Rigidbody>());
         instance.start();
         instance.release();
     }

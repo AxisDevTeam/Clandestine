@@ -9,6 +9,9 @@
         },
         {
             "m_Id": "8356880533ea4efbabff30628ff768d3"
+        },
+        {
+            "m_Id": "014c9c6e723940c385d4f28988c59eaf"
         }
     ],
     "m_Nodes": [
@@ -127,6 +130,25 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.ShaderKeyword",
+    "m_ObjectId": "014c9c6e723940c385d4f28988c59eaf",
+    "m_Guid": {
+        "m_GuidSerialized": "85b36900-3f6d-4692-a481-8d1b9378a6f4"
+    },
+    "m_Name": "Main Light Shadows",
+    "m_DefaultReferenceName": "BOOLEAN_014C9C6E723940C385D4F28988C59EAF_ON",
+    "m_OverrideReferenceName": "_MAIN_LIGHT_SHADOWS",
+    "m_GeneratePropertyBlock": true,
+    "m_KeywordType": 0,
+    "m_KeywordDefinition": 1,
+    "m_KeywordScope": 1,
+    "m_Entries": [],
+    "m_Value": 0,
+    "m_IsEditable": true
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector3MaterialSlot",
     "m_ObjectId": "03cb69a6e0674283aace84b5d08521d4",
     "m_Id": 1,
@@ -164,8 +186,8 @@
         "m_Expanded": true,
         "m_Position": {
             "serializedVersion": "2",
-            "x": -660.0000610351563,
-            "y": 7.000001907348633,
+            "x": -673.0,
+            "y": 8.999994277954102,
             "width": 206.00001525878907,
             "height": 132.00001525878907
         }
@@ -316,7 +338,7 @@
     "m_OverrideReferenceName": "_SHADOWS_SOFT",
     "m_GeneratePropertyBlock": true,
     "m_KeywordType": 0,
-    "m_KeywordDefinition": 0,
+    "m_KeywordDefinition": 1,
     "m_KeywordScope": 1,
     "m_Entries": [],
     "m_Value": 0,
