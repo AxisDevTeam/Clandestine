@@ -90,9 +90,8 @@
 	<object class="MixerBusPanner" id="{7c45ea38-03af-4eba-b363-0decf281270e}" />
 	<object class="MultiSound" id="{be8da39a-b5aa-42e3-8414-57b659c48816}">
 		<property name="length">
-			<value>0.60081632653061223</value>
+			<value>0.59999999999999998</value>
 		</property>
-		<property name="name" />
 		<relationship name="modulators">
 			<destination>{149aa487-aea0-4492-98ae-f2873e17ea86}</destination>
 			<destination>{07b2b88b-836e-4b12-a6ca-79fc9d07819f}</destination>
@@ -107,6 +106,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{c994292a-942b-4d60-b798-a5e67e6b97e3}">
+		<property name="volume">
+			<value>1.5</value>
+		</property>
 		<property name="name">
 			<value>Gunshot</value>
 		</property>
@@ -172,6 +174,8 @@
 			<destination>{7bdfa106-d9d8-4e15-a103-849fd42ccf36}</destination>
 			<destination>{7290195e-326b-43e0-883b-3e2951e6fd24}</destination>
 			<destination>{d1006ce0-b26e-47e8-9188-258dd737821e}</destination>
+			<destination>{9c271a4e-19f2-474c-9c1c-f8c2632f5e4a}</destination>
+			<destination>{41d382d9-4959-4fcc-b287-616c2b47fad1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{cf5aba7f-068f-40be-b280-e21676b472cb}" />
@@ -179,18 +183,18 @@
 	<object class="SpatialiserEffect" id="{1433ad8e-182a-44cd-961a-e8fe8a02a182}" />
 	<object class="AutomationPoint" id="{939e07f5-6f13-4e10-841d-608b0d1f09b6}">
 		<property name="position">
-			<value>0.024630541871921152</value>
+			<value>0.080000000000000002</value>
 		</property>
 		<property name="value">
 			<value>1</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.390251547</value>
+			<value>-0.416902244</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{4204fe18-6107-4c56-9073-9b07291574f2}">
 		<property name="position">
-			<value>0.60081632653061223</value>
+			<value>0.59999999999999998</value>
 		</property>
 		<property name="value">
 			<value>0</value>
@@ -198,13 +202,16 @@
 	</object>
 	<object class="ThreeEQEffect" id="{7bdfa106-d9d8-4e15-a103-849fd42ccf36}">
 		<property name="lowGain">
-			<value>0.5</value>
+			<value>5</value>
 		</property>
 		<property name="midGain">
-			<value>-1</value>
+			<value>-5</value>
 		</property>
 		<property name="highGain">
 			<value>2</value>
+		</property>
+		<property name="lowCrossover">
+			<value>90</value>
 		</property>
 		<property name="crossoverSlope">
 			<value>0</value>
@@ -212,6 +219,46 @@
 	</object>
 	<object class="MixerBusFader" id="{7290195e-326b-43e0-883b-3e2951e6fd24}" />
 	<object class="SFXReverbEffect" id="{d1006ce0-b26e-47e8-9188-258dd737821e}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
+		<property name="decayTime">
+			<value>100</value>
+		</property>
+		<property name="earlyDelay">
+			<value>300</value>
+		</property>
+		<property name="lateDelay">
+			<value>100</value>
+		</property>
+		<property name="HFReference">
+			<value>20000</value>
+		</property>
+		<property name="HFDecayRatio">
+			<value>100</value>
+		</property>
+		<property name="lowShelfFrequency">
+			<value>64</value>
+		</property>
+		<property name="lowShelfGain">
+			<value>-21</value>
+		</property>
+		<property name="highCut">
+			<value>1300</value>
+		</property>
+		<property name="earlyLateMix">
+			<value>54</value>
+		</property>
+	</object>
+	<object class="ThreeEQEffect" id="{9c271a4e-19f2-474c-9c1c-f8c2632f5e4a}">
+		<property name="bypass">
+			<value>true</value>
+		</property>
+		<property name="lowGain">
+			<value>-80</value>
+		</property>
+	</object>
+	<object class="SFXReverbEffect" id="{41d382d9-4959-4fcc-b287-616c2b47fad1}">
 		<property name="earlyLateMix">
 			<value>0</value>
 		</property>

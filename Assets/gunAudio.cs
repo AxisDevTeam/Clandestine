@@ -27,9 +27,12 @@ public class gunAudio : MonoBehaviour
     {
         //randomSound.clip = audioSources[Random.Range(0, audioSources.Length)];
         //randomSound.Play();
+        /*
         instance = FMODUnity.RuntimeManager.CreateInstance("event:/Gunshot");
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(instance, player, GetComponent<Rigidbody>());
         instance.start();
-        instance.release();
+        instance.release(); */
+
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Gunshot", player.gameObject);
     }
 }
