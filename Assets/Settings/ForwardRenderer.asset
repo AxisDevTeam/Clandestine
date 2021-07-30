@@ -194,13 +194,15 @@ MonoBehaviour:
   m_Name: ForwardRenderer
   m_EditorClassIdentifier: 
   m_RendererFeatures:
-  - {fileID: 8698326237225714978}
   - {fileID: -3033589405076907223}
   - {fileID: 7293260012779493412}
   - {fileID: 8307346831745853243}
   - {fileID: 6408580490190645295}
   - {fileID: -3952971234861759955}
-  m_RendererFeatureMap: 22854c86a0a9b678299b003c8286e6d52458481c57dd36653ba72de4ed9f49732fe84f7000daef582d42ba0a9b3924c9
+  - {fileID: 543534502075950722}
+  - {fileID: 8698326237225714978}
+  - {fileID: 1643817243036977819}
+  m_RendererFeatureMap: 299b003c8286e6d52458481c57dd36653ba72de4ed9f49732fe84f7000daef582d42ba0a9b3924c982e667f7bf058b0722854c86a0a9b6789b8ae1be1203d016
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   shaders:
@@ -268,6 +270,54 @@ MonoBehaviour:
       restoreCamera: 1
       offset: {x: 0, y: 0, z: 0, w: 0}
       cameraFieldOfView: 25.4
+--- !u!114 &543534502075950722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9451660f9acaa2c4a82a6ba44563e0ac, type: 3}
+  m_Name: Edge Blur
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    Event: 550
+    blitMaterial: {fileID: 2100000, guid: 3a7f89b9b83e8034dac7b9bc43d23e93, type: 2}
+    blitMaterialPassIndex: 0
+    setInverseViewMatrix: 0
+    srcType: 0
+    srcTextureId: 
+    srcTextureObject: {fileID: 0}
+    dstType: 0
+    dstTextureId: 
+    dstTextureObject: {fileID: 0}
+--- !u!114 &1643817243036977819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9451660f9acaa2c4a82a6ba44563e0ac, type: 3}
+  m_Name: NewBlit
+  m_EditorClassIdentifier: 
+  m_Active: 0
+  settings:
+    Event: 300
+    blitMaterial: {fileID: 2100000, guid: 43b95ce4231b7b74b914eb87f30383ee, type: 2}
+    blitMaterialPassIndex: 0
+    setInverseViewMatrix: 0
+    srcType: 0
+    srcTextureId: _CameraColorTexture
+    srcTextureObject: {fileID: 0}
+    dstType: 0
+    dstTextureId: _BlitPassTexture
+    dstTextureObject: {fileID: 0}
 --- !u!114 &1813871266152178354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,17 +424,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9451660f9acaa2c4a82a6ba44563e0ac, type: 3}
   m_Name: NewBlit
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   settings:
     Event: 1000
     blitMaterial: {fileID: 2100000, guid: 6f3999dfd109f044c8f6a7029be1890b, type: 2}
     blitMaterialPassIndex: 0
     setInverseViewMatrix: 0
-    srcType: 0
-    srcTextureId: 
+    srcType: 1
+    srcTextureId: _AfterPostProcessTexture
     srcTextureObject: {fileID: 0}
-    dstType: 0
-    dstTextureId: 
+    dstType: 1
+    dstTextureId: _AfterPostProcessTexture
     dstTextureObject: {fileID: 0}
 --- !u!114 &7946173811317977905
 MonoBehaviour:
@@ -422,17 +472,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f62c9c65cf3354c93be831c8bc075510, type: 3}
-  m_Name: ssao
+  m_Name: SSAO
   m_EditorClassIdentifier: 
   m_Active: 1
   m_Shader: {fileID: 4800000, guid: 0849e84e3d62649e8882e9d6f056a017, type: 3}
   m_Settings:
     Downsample: 0
     Source: 0
-    NormalSamples: 2
+    NormalSamples: 0
     Intensity: 1
     DirectLightingStrength: 0.739
-    Radius: 0.55
+    Radius: 0.25
     SampleCount: 6
 --- !u!114 &9171985164930855940
 MonoBehaviour:

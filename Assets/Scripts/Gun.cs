@@ -10,6 +10,8 @@ public class Gun : MonoBehaviour
 
     public Animator anim;
 
+    public GameObject decal;
+
     // Update is called once per frame
     void Update()
     {
@@ -45,7 +47,9 @@ public class Gun : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(fpsCam.transform.position, fpsCam.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
+            Instantiate(decal, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+            //decal.transform.position = hit.point;
+            //decal.transform.rotation = Quaternion.FromToRotation(Vector3.up, hit.normal);
             //tells you what got hit
 
             Shootthis target = hit.transform.GetComponent<Shootthis>();

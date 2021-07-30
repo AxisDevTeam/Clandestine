@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{1d951b06-2854-449a-8fe3-195742b4560a}">
+		<property name="assetPath">
+			<value>S-22.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.432</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{920b5d7c-f5cf-4320-a28c-23e85022d416}</destination>
+		</relationship>
+	</object>
+</objects>

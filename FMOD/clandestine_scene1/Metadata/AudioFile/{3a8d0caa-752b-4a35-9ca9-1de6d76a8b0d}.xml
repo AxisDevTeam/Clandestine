@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.01.00">
+	<object class="AudioFile" id="{3a8d0caa-752b-4a35-9ca9-1de6d76a8b0d}">
+		<property name="assetPath">
+			<value>S-19.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.40799999999999997</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{920b5d7c-f5cf-4320-a28c-23e85022d416}</destination>
+		</relationship>
+	</object>
+</objects>

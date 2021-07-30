@@ -50,10 +50,12 @@ public class PlayerLook : MonoBehaviour
         {
             //RotY
             rotY = Mathf.Clamp(rotY, -upDownRange, upDownRange);
-            camstuff.transform.localRotation = Quaternion.Euler(yVelocity, 0, 0);
+            camstuff.transform.localRotation = Quaternion.Euler(Mathf.Clamp(yVelocity, -upDownRange, upDownRange), 0, 0);
 
             //RotX
             player.Rotate(0, xVelocity, 0);
+
+            //camstuff.transform.localRotation = Quaternion.Euler(new Vector3(Mathf.Clamp(camstuff.transform.localRotation.eulerAngles.x, -upDownRange, upDownRange), Mathf.Clamp(camstuff.transform.localRotation.eulerAngles.y, -upDownRange, upDownRange), Mathf.Clamp(camstuff.transform.localRotation.eulerAngles.z, -upDownRange, upDownRange)));
         }
 
         /*
